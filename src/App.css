@@ -1,0 +1,408 @@
+body {
+  background-color: #fafafa;
+  /* background-color: black; */
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333333;
+}
+
+h1, h3{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: #333333;
+}
+
+.selected{
+  font-weight: bold;
+}
+
+
+.App-header, .App-nav, .App-content_head, .App-content_main, .App-content_main-posts, .App-messages, .App-content_users{
+  box-shadow: 0px 6px 20px 0px rgb(54 0 0 / 5%);
+  border-radius: 12px;
+  overflow: hidden;
+  color: #333333;
+}
+
+
+.App {
+  /* text-align: center; */
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.App-header {
+  display: flex;
+  flex-flow: row;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px 0px 20px 0px;
+}
+
+
+.App-header svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.App-container{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  margin-top: 30px;
+}
+
+.App-nav{
+  width: 15%;
+  height: 180px;
+  background: #fff;
+  margin-right: 30px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+
+}
+
+.app-nav a.active{
+  opacity: 0.6;
+}
+
+.App-container_mainsect{
+  width: 85%;
+  overflow: hidden;
+  /* background: #fff; */
+}
+.App-content{
+  /* width: 100%; */
+  overflow: hidden;
+}
+
+.App-content_head{
+  margin-bottom: 30px;
+  
+}
+.App-content_head-img{
+  height: 110px;
+  width: 100%;
+  background-size: cover;
+   background-image: url('/Users/3/my-app/public/1.jpg');
+  background-repeat: no-repeat;
+}
+
+.App-content_main{
+  display: flex;
+  flex-flow: row;
+  background: #fff;
+  padding: 20px;
+}
+
+.App-content_main-pic {
+  height: 300px;
+  width: 300px;
+  background: orangered;
+  margin-right: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.App-content_main-posts{
+  background: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  position: relative;
+  /* height: 250px; */
+}
+
+.App-content_textarea {
+  outline: none;
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 10px 160px 10px 10px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 20px 0 ;
+  width: 100%;
+  height: 70px;
+  /* position: relative; */
+}
+
+.App-content_main-posts button{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: #333333;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  position: absolute;
+  right: 30px;
+  top: 75px;
+  z-index: 10;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.post img {
+  width: 50px;
+  height: 50px;
+  background-color: lawngreen;
+  border-radius: 50%;
+}
+
+.post_content-font {
+  margin-left: 15px;
+}
+
+/* --------------------------------- */
+
+.App-messages{
+  display: flex;
+  flex-flow: row;
+  /* padding: 20px; */
+  height: 700px;
+  background-color: #fff;
+}
+
+.App-messages_dialogs{
+  display: flex;
+  flex-flow: column;
+  border: 2px solid lawngreen;
+  width: 35%;
+  margin: 20px 0 20px 20px;
+  color: #333333;
+}
+
+.App-messages_dialog{
+  display: flex;
+  flex-flow: column;
+  width: 65%;
+  border: 2px solid salmon;
+  margin: 20px 20px 20px 0px;
+  
+}
+
+.App-messages_dialogs-user{
+  height: 70px;
+  padding: 10px;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-flow: row nowrap; 
+}
+
+.App-messages_dialogs-user a{
+  display: flex;
+  flex-flow: row;
+}
+
+.user_avatar{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: chocolate;
+  margin-right: 20px;
+}
+
+.App-content_messages_textarea {
+  outline: none;
+  border: none;
+  background: #fafafa;
+  padding: 10px 160px 10px 10px;
+  box-sizing: border-box;
+  resize: none;
+  width: 100%;
+  height: 70px;
+  /* position: relative; */
+}
+
+.App-content_messages_btn {
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: #333333;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.App-messages_dialog-controls{
+  display: flex;
+  justify-content: end;
+  /* position: fixed; */
+  width: 100%;
+  height: 10%;
+  margin-top: 20px;
+}
+
+.App-messages_dialog-messages{
+  overflow-y: scroll;
+  height: 80%;
+  padding: 20px 20px 0 20px;
+}
+
+.message{
+  background-color:#fafafa;
+  border-radius: 15px;
+  padding: 6px;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 15px;
+  width: 40%;
+}
+
+.message_content-font{
+  font-size: 15px;
+}
+
+.post_pic {
+  background: chocolate;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.message_content{
+  padding-left: 20px;
+}
+
+.App-messages_header{
+  height: 10%;
+  background: #fafafa;
+}
+
+
+.App-content_users{
+  display: flex;
+  flex-flow: column;
+  padding: 30px;
+  height: 700px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.App-content_users-img {
+  background: chocolate;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.App-content_users-user {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.App-content_users-info{
+  display: flex;
+  flex-flow: column;
+  margin-left: 20px;
+}
+
+.App-content_users-content, .App-content_users-info_location{
+  display: flex;
+  flex-flow: row;
+}
+
+.App-content_users-info_location {
+  color: #333333;
+  opacity: 0.7;
+}
+
+.App-content_users-info_country{
+  margin-left: 8px;
+}
+
+.App-content_users-info_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.App-content_users-followbtn button{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: khaki;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  height: 22px;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+
+input.error {
+  border-color: red;
+}
+
+.input-feedback {
+  color: rgb(235, 54, 54);
+  margin-top: -15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: rgb(70, 153, 179);
+  color: white;
+  border: 1px solid rgb(70, 153, 179);
+  transition: ease-in-out background-color 250ms, ease-in-out color 250ms;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(70, 153, 179);
+}
