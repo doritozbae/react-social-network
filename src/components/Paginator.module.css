@@ -35,22 +35,22 @@
 }
 
 .selectedPage {
-   color: #ffffff;
+   /* color: #ffffff; */
    background: #104f9e;
    font-weight: 700;
    border: 1px solid #104f9e;
 }
 
 .container {
-   background-color: white;
+   /* background-color: white; */
    border-radius: 10px;
-   box-shadow: 0 0 15px 1px #dcdade;
-   padding: 30px;
-   margin-bottom: 30px;
+   border: solid 1px yellow;
+   width: 10%;
+   height: 10%;
 }
 
 .button {
-   color: #ffffff;
+   /* color: #ffffff; */
    background: #104f9e;
    font-weight: 600;
    border: 1px solid #104f9e;
@@ -74,3 +74,55 @@
 .input:hover, .input:focus{
    outline: none;
 }
+
+.friends .friend {
+   display: flex;
+   justify-content: space-between;
+   width: 700px;
+   margin-bottom: 10px;
+   color: #cfd2e3;
+   background-color: #16192a;
+ }
+ 
+ .friends .friend .photo {
+   padding: 10px 20px 10px 10px;
+   width: 100px;
+   cursor: pointer;
+ }
+ 
+ .friends .friend .info {
+   width: 500px;
+ }
+ 
+ .friends .friend .info a {
+   text-decoration: none;
+   color: #cfd2e3;
+ }
+ 
+ .friends .friend .info .name {
+   margin-top: 10px;
+   font-size: 18px;
+   font-weight: 500;
+   cursor: pointer;
+ }
+ 
+ .friends .friend .info .status {
+   margin-top: 10px;
+   font-size: 15px;
+   color: #656678;
+ }
+ 
+ .friends .friend .info .message {
+   margin-top: 10px;
+   font-size: 15px;
+   cursor: pointer;
+ }
+ 
+ .friends .friend .actions .unfriend {
+   color: #656678;
+   width: 80px;
+   margin-top: 10px;
+   margin-right: 10px;
+   font-size: 14px;
+   cursor: pointer;
+ }

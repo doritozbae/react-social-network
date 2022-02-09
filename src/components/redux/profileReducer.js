@@ -17,7 +17,7 @@ export const setStatus = (status) => ({ type: SET_STATUS, status });
 let initialState = {
    posts: [
      { id: 1, message: "Hi", likesCount: 12 },
-     { id: 2, message: "It's my first post", likesCount: 11 },
+     { id: 2, message: "Use double click to change profile status", likesCount: 11 },
    ],
    newPostText: "",
    profile: null,

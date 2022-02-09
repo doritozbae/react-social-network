@@ -26,8 +26,7 @@ class UsersApiComponent extends React.Component {
    } 
 
    render() {
-
-      console.log("USERS");
+      // console.log("USERS");
 
       return <>
                { this.props.isFetching ? <Preloader /> : null}

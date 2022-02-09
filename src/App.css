@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+
 body {
   background-color: #fafafa;
   /* background-color: black; */
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -15,12 +18,19 @@ ul {
 
 h1, h3{
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
-a{
-  color: #333333;
+h1{
+  text-transform: capitalize;
+  font-size: 24px;
 }
+h4{
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
 
 .selected{
   font-weight: bold;
@@ -46,18 +56,24 @@ a{
   display: flex;
   flex-flow: row;
   background-color: #fff;
-  width: 100%;
+  /* width: 98.5%; */
   margin: 0 auto;
   margin-top: 30px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px ;
+  justify-content: space-between;
 }
 
+.App-header_font{
+  letter-spacing: -.04em;
+  font-size: 24px;
+  font-weight: 800;
+  /* color: #fbb7d9; */
+  /* color: #333333; */
+  color: #d9292f;
+}
 
-.App-header svg {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  margin-right: 5px;
+.black{
+    color: #333333;
 }
 
 .App-container{
@@ -72,15 +88,33 @@ a{
   height: 180px;
   background: #fff;
   margin-right: 30px;
-  padding: 20px;
+  padding: 15px 20px 20px 20px;
   display: flex;
   flex-flow: column wrap;
-
 }
 
-.app-nav a.active{
-  opacity: 0.6;
+.App-nav-style {
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 500;
+  /* color: #2c2c2c; */
+  color: #6d7073;
+  line-height: 3;
+  border-bottom: 0.5px solid #e8f2f8;
 }
+
+.App-nav svg {
+  height: 21px;
+  width: 21px;
+  margin-right: 12px;
+  /* color: #d5dce2; */
+  color: #d9292f;
+}
+
+/* .App-nav-style::after{
+  width: 20px;
+
+} */
 
 .App-container_mainsect{
   width: 85%;
@@ -131,7 +165,9 @@ a{
 
 .App-content_textarea {
   outline: none;
-  border: 1px solid #333333;
+  /* border: 1px solid #333333; */
+  border: none;
+  background-color: #fafafa;
   border-radius: 15px;
   padding: 10px 160px 10px 10px;
   box-sizing: border-box;
@@ -146,8 +182,8 @@ a{
   width: 150px;
   height: 40px;
   color: white;
-  background: #333333;
-  border: none;
+  background: #d9292f;
+  border: 1px solid #d9292f;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -155,6 +191,10 @@ a{
   right: 30px;
   top: 75px;
   z-index: 10;
+}
+.App-content_main-posts button:hover{
+  background-color: #fff;
+  color: #d9292f;
 }
 
 .post {
@@ -168,7 +208,6 @@ a{
 .post img {
   width: 50px;
   height: 50px;
-  background-color: lawngreen;
   border-radius: 50%;
 }
 
@@ -189,7 +228,7 @@ a{
 .App-messages_dialogs{
   display: flex;
   flex-flow: column;
-  border: 2px solid lawngreen;
+  /* border: 2px solid lawngreen; */
   width: 35%;
   margin: 20px 0 20px 20px;
   color: #333333;
@@ -199,7 +238,7 @@ a{
   display: flex;
   flex-flow: column;
   width: 65%;
-  border: 2px solid salmon;
+  /* border: 2px solid salmon; */
   margin: 20px 20px 20px 0px;
   
 }
@@ -213,6 +252,7 @@ a{
   margin-bottom: 5px;
   display: flex;
   flex-flow: row nowrap; 
+
 }
 
 .App-messages_dialogs-user a{
@@ -221,10 +261,13 @@ a{
 }
 
 .user_avatar{
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  background: chocolate;
+  /* background: white; */
+  background-image: url(/src/assets/user1.png);
+  background-position: center;
+  background-size: cover;
   margin-right: 20px;
 }
 
@@ -244,12 +287,18 @@ a{
   width: 150px;
   height: 40px;
   color: white;
-  background: #333333;
-  border: none;
+  background: #d9292f;
+  border: 1px solid #d9292f;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
   position: absolute;
+  margin-top: 15px;
+}
+
+.App-content_messages_btn:hover{
+  background: white;
+  color: #d9292f;
 }
 
 .App-messages_dialog-controls{
@@ -270,11 +319,13 @@ a{
 .message{
   background-color:#fafafa;
   border-radius: 15px;
-  padding: 6px;
+  padding: 15px;
   display: flex;
   flex-flow: row;
   margin-bottom: 15px;
-  width: 40%;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
 }
 
 .message_content-font{
@@ -282,7 +333,11 @@ a{
 }
 
 .post_pic {
-  background: chocolate;
+  /* background: white; */
+  background-image: url(/src/assets/user1.png);
+  background-position: center;
+  background-size: cover;
+  /* background: chocolate; */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -295,8 +350,21 @@ a{
 .App-messages_header{
   height: 10%;
   background: #fafafa;
+  width: 96.4%;
+  margin-left: 20px;
+  border-radius: 15px;
+  padding-left: 20px;
+  display: flex;
+  flex-flow: row;
 }
 
+.online {
+  width: 10px;
+  height: 10px;
+  background-color: #b3ffa6;
+  border-radius: 50%;
+  margin: 29px 10px;
+}
 
 .App-content_users{
   display: flex;
@@ -304,11 +372,15 @@ a{
   padding: 30px;
   height: 700px;
   background-color: #fff;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  overflow: hidden;
 }
 
 .App-content_users-img {
-  background: chocolate;
+  /* background: white; */
+  background-image: url(/src/assets/user1.png);
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -350,13 +422,18 @@ a{
   width: 150px;
   height: 40px;
   color: white;
-  background: khaki;
-  border: none;
+  /* background: #fbb7d9;
+  border: #fbb7d9; */
+  background-color: #d9292f;
+  border: 1px solid #d9292f;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
 }
-
+.App-content_users-followbtn button:hover{
+  background-color: white;
+  color: #d9292f;
+}
 
 form {
   max-width: 500px;
@@ -383,7 +460,7 @@ input {
 }
 
 input.error {
-  border-color: red;
+  border-color:#d9292f;
 }
 
 .input-feedback {
@@ -393,16 +470,50 @@ input.error {
   margin-bottom: 20px;
 }
 
-button {
-  padding: 10px 15px;
-  background-color: rgb(70, 153, 179);
-  color: white;
-  border: 1px solid rgb(70, 153, 179);
-  transition: ease-in-out background-color 250ms, ease-in-out color 250ms;
+a {
+  text-decoration: none;
 }
 
-button:hover {
+button, .App-header-login {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  /* background-color: #fbb7d9; */
+  /* background-color: #d9292f;
+  border: 1px solid #d9292f; */
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: white;
+  /* border: 1px solid #fbb7d9; */
+  transition: ease-in-out background-color 250ms, ease-in-out color 250ms;
+}
+.App-header-login{ 
+  margin-right: 15px;
+}
+
+.App-header-login a{ 
+  color: white;
+
+}
+.App-header-login a:hover{ 
+  color: #333333;
+}
+
+button:hover, .App-header-login:hover {
   cursor: pointer;
   background-color: white;
-  color: rgb(70, 153, 179);
+  color: #333333;
+}
+
+.App-header-btns, .App-header-logo{
+  display: flex;
+  flex-flow: row;
+}
+
+.message_content-time{
+  position: absolute;
+  font-size: 14px;
+  color: #6d7073;
+  bottom: -5px;
+  right: 12px;
 }

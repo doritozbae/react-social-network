@@ -22,7 +22,7 @@ const Messages = (props) => {
    ));
 
    let messageElements = props.messages.map(m => (
-      <NewMessage message={m.message} />
+      <NewMessage message={m.message} time={m.time}/>
    ));
 
   let onSendMessageClick = () => {
@@ -49,7 +49,8 @@ const Messages = (props) => {
          </div>
          <div className="App-messages_dialog">
             <div className="App-messages_header"> 
-            
+               <h4>Alice doritozbae</h4>
+               <div className="online"></div>
             </div>
 
             <div className="App-messages_dialog-messages">
